@@ -36,7 +36,7 @@ header_key = {"Cookie":"HoldTheDoor={}".format(key)}
 data_key = {"id":"2089", "holdthedoor":"Submit+Query", "key":key}
 status_flag = ""
 print("Sending requests....")
-for i in range(100):
+for i in range(4096):
     try:
         requests.post(url, data = data_key, headers = header_key)
         log.info("Success")
